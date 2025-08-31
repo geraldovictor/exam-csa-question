@@ -1,0 +1,121 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.quiz-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    color: #436eee;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Bloco da Pergunta */
+.question-block {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.question-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Estilo das Respostas */
+.answers {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.answers li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Efeito Hover */
+.answers:not(.answered) li:not(.selected):hover {
+    background-color: #e9e9f3;
+    border-color: #436eee;
+}
+
+/* Estilo para Múltipla Escolha - Resposta Selecionada */
+.answers.multiple-choice li.selected {
+    background-color: #dbe4ff;
+    border-color: #436eee;
+}
+
+/* Estilos de Feedback */
+.answers li.correct {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border-color: #28a745;
+    font-weight: bold;
+}
+
+.answers li.incorrect {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border-color: #dc3545;
+}
+
+.answers li.correct::before {
+    content: '✔ ';
+    margin-right: 8px;
+}
+
+.answers li.incorrect::before {
+    content: '✖ ';
+    margin-right: 8px;
+}
+
+/* Botão de Verificação */
+.check-btn {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #436eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.check-btn:hover {
+    background-color: #3158c5;
+}
+
+.check-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
